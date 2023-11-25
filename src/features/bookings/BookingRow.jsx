@@ -95,6 +95,7 @@ function BookingRow({
       <Tag type={statusToTagName[status]}>{status.replace('-', ' ')}</Tag>
 
       <Amount>{formatCurrency(totalPrice)}</Amount>
+      
       <Modal>
       <Menus.Menu>
         <Menus.Toggle id={bookingId}  />

@@ -6,7 +6,7 @@ function fromToday(numDays, withTime = false) {
   return date.toISOString().slice(0, -1);
 }
 
-export const bookings = [
+export const bookingsApi = [
   // CABIN 001
   {
     created_at: fromToday(-20, true),
