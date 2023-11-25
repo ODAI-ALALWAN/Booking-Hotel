@@ -136,11 +136,7 @@ function BookingRow({
              />
            </Modal.Window>
 
-
       </Modal>
-
-
-
 
       </Table.Row>
 
