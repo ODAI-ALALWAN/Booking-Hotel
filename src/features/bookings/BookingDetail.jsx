@@ -31,7 +31,7 @@ const HeadingGroup = styled.div`
 function BookingDetail() {
   const { Booking , isLoading } = useBookingId();
   const { checkOut ,isCheckingOut } = useCheckout()
-  const { deleteBooking , isDeletingBooking } = useDeleteBooking()
+  const { deleteBooking  } = useDeleteBooking()
 
   const moveBack = useMoveBack();
   const navigate = useNavigate();
@@ -75,7 +75,8 @@ function BookingDetail() {
               <ConfirmDelete
                 resource='booking'
                 onConfirm={(options) => deleteBooking(bookingId, options)}
-                disabled={isDeletingBooking}
+                // disabled={isDeletingBooking}
+                disabled
               />
             </Modal.Window>
           </Modal>
