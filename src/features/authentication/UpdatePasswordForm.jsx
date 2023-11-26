@@ -62,7 +62,8 @@ function UpdatePasswordForm() {
         <Button onClick={handleReset} type='reset' variation='secondary'>
           Cancel
         </Button>
-        <Button disabled={isUpdating}>Update password</Button>
+        {/* <Button disabled={isUpdating}>Update password</Button> */}
+        <Button disabled>Update password</Button>
       </FormRow>
     </Form>
   );
