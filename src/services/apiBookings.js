@@ -93,22 +93,7 @@ export async function getStaysAfterDate(date) {
 }
 
 
-// Activity means that there is a check in or a check out today
-// export async function getStaysTodayActivity() {
-//   const { data, error } = await supabase
-//     .from("Booking")
-//     .select("*, guests(fullName, nationality, countryFlag)")
-//     .order("created_at");
 
-//   if (error) {
-//     console.error(error);
-//     throw new Error("Bookings could not get loaded");
-//   }
-  
-
-
-//   return data;
-// }
 
 export async function getStaysTodayActivity() {
   const { data, error } = await supabase
@@ -124,6 +109,24 @@ export async function getStaysTodayActivity() {
 
   return data;
 }
+
+// export async function getStaysTodayActivity() {
+//   const { data, error } = await supabase
+//     .from("bookings")
+//     .select("*, guests(fullName, nationality, countryFlag)")
+//     .or(
+//       `and(status.eq.unconfirmed,startDate.eq.${getToday()}),and(status.eq.checked-in,endDate.eq.${getToday()})`
+//     )
+//     .order("created_at");
+
+
+//   if (error) {
+//     console.error(error);
+//     throw new Error("Bookings could not get loaded");
+//   }
+//   return data;
+// }
+
 
 
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import Tag from "../../ui/Tag";
 import { Flag } from "../../ui/Flag";
@@ -32,7 +32,6 @@ function TodayItem({ activity }) {
 
 
 
-
   return (
     <StyledTodayItem>
       {status === "unconfirmed" && <Tag type="green">Arriving</Tag>}
@@ -47,13 +46,14 @@ function TodayItem({ activity }) {
         <Button
           size="small"
           variation="primary"
-          as={Link}
-          to={`/checkin/${id}`}
+          // as={Link}
+          // to={`/checkin/${id}`}
+          disabled
         >
           Check in
         </Button>
       )}
-      {status === "checked-in" && <CheckoutButton bookingId={id} />}
+      {status === "checked-in" && <CheckoutButton bookingId={id}  />}
     </StyledTodayItem>
   );
 }
