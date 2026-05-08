@@ -10,6 +10,10 @@ const StyledErrorFallback = styled.main`
   align-items: center;
   justify-content: center;
   padding: 4.8rem;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem;
+  }
 `;
 
 const Box = styled.div`

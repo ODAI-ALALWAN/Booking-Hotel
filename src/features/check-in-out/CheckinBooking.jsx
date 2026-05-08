@@ -20,6 +20,11 @@ const Box = styled.div`
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
   padding: 2.4rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem;
+    font-size: 1.3rem;
+  }
 `;
 
 

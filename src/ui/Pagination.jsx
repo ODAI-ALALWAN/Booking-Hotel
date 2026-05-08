@@ -8,6 +8,11 @@ const StyledPagination = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 `;
 
 const P = styled.p`
@@ -16,6 +21,12 @@ const P = styled.p`
 
   & span {
     font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-left: 0;
+    text-align: center;
   }
 `;
 

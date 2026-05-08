@@ -7,6 +7,8 @@ import {
   HiOutlineHomeModern,
   HiOutlineUsers,
 } from "react-icons/hi2";
+import { useContext } from "react";
+import { SidebarContext } from "./AppLayout";
 
 const NavList = styled.ul`
   display: flex;
@@ -54,35 +56,44 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function MainNav() {
+  const { setIsSidebarOpen } = useContext(SidebarContext);
+
+  function closeSidebar() {
+    // Only close on mobile
+    if (window.innerWidth <= 768) {
+      setIsSidebarOpen(false);
+    }
+  }
+
   return (
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to="/dashboard">
+          <StyledNavLink to="/dashboard" onClick={closeSidebar}>
             <HiOutlineHome />
             <span>Home</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/bookings">
+          <StyledNavLink to="/bookings" onClick={closeSidebar}>
             <HiOutlineCalendarDays />
             <span>Bookings</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/cabins">
+          <StyledNavLink to="/cabins" onClick={closeSidebar}>
             <HiOutlineHomeModern />
             <span>Cabins</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/users">
+          <StyledNavLink to="/users" onClick={closeSidebar}>
             <HiOutlineUsers />
             <span>Users</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/settings">
+          <StyledNavLink to="/settings" onClick={closeSidebar}>
             <HiOutlineCog6Tooth />
             <span>Settings</span>
           </StyledNavLink>

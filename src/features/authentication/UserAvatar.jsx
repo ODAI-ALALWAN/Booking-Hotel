@@ -8,6 +8,13 @@ const StyledUserAvatar = styled.div`
   font-weight: 500;
   font-size: 1.4rem;
   color: var(--color-grey-600);
+
+  @media (max-width: 768px) {
+    & span {
+      display: none;
+    }
+    gap: 0;
+  }
 `;
 
 const Avatar = styled.img`
@@ -19,7 +26,12 @@ const Avatar = styled.img`
   object-position: center;
   border-radius: 50%;
   outline: 2px solid var(--color-grey-100);
+
+  @media (max-width: 768px) {
+    width: 3rem;
+  }
 `;
+
 
 function UserAvatar() {
   const { user } = useUser();

@@ -17,6 +17,10 @@ import { Flag } from '../../ui/Flag';
 const StyledBookingDataBox = styled.section`
   padding: 3.2rem 4rem; 
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const Header = styled.header`
@@ -48,10 +52,31 @@ const Header = styled.header`
     font-size: 2rem;
     margin-left: 4px;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.6rem;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
+
+    & div:first-child {
+      font-size: 1.4rem;
+      gap: 0.8rem;
+    }
+
+    & span {
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 const Section = styled.section`
   padding: 3.2rem 4rem 1.2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem;
+  }
 `;
 
 const Guest = styled.div`
@@ -65,6 +90,12 @@ const Guest = styled.div`
   & p:first-of-type {
     font-weight: 500;
     color: var(--color-grey-700);
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -92,6 +123,13 @@ const Price = styled.div`
     width: 2.4rem;
     color: currentColor !important;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.2rem 1.6rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
 `;
 
 const Footer = styled.footer`
@@ -99,6 +137,10 @@ const Footer = styled.footer`
   font-size: 1.2rem;
   color: var(--color-grey-500);
   text-align: right;
+
+  @media (max-width: 768px) {
+    padding: 1.2rem 1.6rem;
+  }
 `;
 
 function BookingDataBox({ booking }) {
