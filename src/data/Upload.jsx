@@ -4,9 +4,9 @@ import supabase from "../services/supabase";
 import Button from "../ui/Button";
 import { subtractDates } from "../utils/helpers";
 
-import { bookings } from "./data-bookings";
-import { cabins } from "./data-cabins";
-import { guests } from "./data-guests";
+import { bookingsApi as bookings } from "./data-bookings.js";
+import { cabinsApi as cabins } from "./data-cabins.js";
+import { guestsApi as guests } from "./data-guests.js";
 
 // const originalSettings = {
 //   minBookingLength: 3,

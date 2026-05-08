@@ -1,21 +1,28 @@
 import styled from "styled-components";
-import { useDarkMode } from "../context/DarkModeContext";
+// import { useDarkMode } from "../context/DarkModeContext";
+import { SiHilton } from "react-icons/si";
 
 const StyledLogo = styled.div`
   text-align: center;
 `;
 
-const Img = styled.img`
-  height: 9.6rem;
-  width: auto;
-`;
+// const Img = styled.img`
+//   height: 9.6rem;
+//   width: auto;
+// `;
 
 function Logo() {
-  const { isDarkMode } = useDarkMode()
-  const src = isDarkMode ? '/LOGODARK.png' : '/LOGO.png'
+  // const { isDarkMode } = useDarkMode()
+  // const src = isDarkMode ? '/LOGODARK.png' : '/LOGO.png'
   return (
     <StyledLogo>
-      <Img src={src} alt="Logo" />
+      <SiHilton
+        style={{
+          width: "5rem",
+          height: "5rem",
+          color: "var(--color-brand-600)",
+        }}
+      />
     </StyledLogo>
   );
 }
